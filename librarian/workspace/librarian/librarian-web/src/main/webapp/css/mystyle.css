@@ -1,0 +1,174 @@
+body {
+	background-color: #402910;
+	background-image: url("wood.jpg");
+}
+
+#header {
+	margin: auto;
+	width: 1000px;
+}
+
+#banner {
+	border: 5px solid black;
+	width: 1000px;
+	height: 250px;
+	background-image: url("libr.jpg");
+	background-size: 1000px 250px;
+}
+
+#banner p, h1 {
+	color: #ffffff;
+}
+
+#pageBody {
+	width: 1000px;
+	display: flex;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#content {
+	border: 4px solid black;
+	min-height: 600px;
+	width: 80%;
+	margin-top: 10px;
+	background: #ffffff;
+	float: left;
+	overflow: hidden;
+	padding-right: 10px;
+}
+
+#newsPanel {
+	width: 20%;
+	background:black;
+	margin-top: 10px;
+	min-height: 600px;
+	float: right;
+	overflow: hidden;
+}
+
+.newsBubble {
+	border: white dashed 3px;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.newsBubble h1 {
+	font-size: 20px;
+	font-weight: normal;
+}
+
+.newsBubble p {
+	font-style: italic;
+	font-size: 12px;
+	color: #eeeeec;
+	padding: 5px;
+	background: #402910;
+}
+
+#content .tabla {
+	color: black;
+}
+
+#content  td {
+	border: 1px solid black;
+	padding: 5px;
+	text-align: left;
+
+}
+
+th {
+	width: 600px;
+	background-color: #402910;
+	color: white;
+	border: 1px solid black;
+	padding: 15px;
+	text-align: left;
+}
+tr:nth-child(even){
+	background-color: #bf813f;
+}
+
+tr:hover {
+	background-color: #402910;
+}
+
+a {
+	color: #402910;
+	font-size: 18px;
+}
+#spanbutton {
+	display: inline-block;
+	width: 140px;
+	background: #402910;
+	border: 5px solid #402910;
+	border-radius: 20px;
+	margin: auto;
+	text-align: center;
+}
+
+#spanbutton a {
+	color: white;
+}
+
+#content h2 {
+	background-color:#402910;
+	margin-left: 15px;
+	color: #ffffff;
+	font-size: 30px;
+	text-align: center;
+}
+
+#content p {
+	text-align: justify;
+	margin-left: 10px;
+	color: #000000;
+}
+
+#content ul {
+	list-style-position: inside;
+}
+
+#content ul li {
+	width: 430px;
+	color: #000000;
+}
+
+#contactTable td{
+	width: 50%;
+}
+
+#footer {
+	background:black;
+	height: 40px;
+	width: 1000px;
+	font-size: 20px;
+	color: white;
+	margin: auto;
+	text-align: center;
+}
+
+#menubar {
+	height: 40px;
+	margin-top: 10px;
+}
+
+#menubar a:HOVER{
+	color: white;
+}
+
+#menubar .menubutton {
+		display: inline-block;
+		width: 140px;
+		background: #ffffff;
+		border: 5px solid #ffffff;
+		border-radius: 20px;
+		margin: 5px 0px 0px 70px;
+		text-align: center;
+}
+
+#menubar .menubutton:HOVER {
+	background: #402910;
+	border: 5px solid #000000;
+	color: #fce94f;
+}

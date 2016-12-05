@@ -1,5 +1,113 @@
 <html>
+<head>
+	<title>Librarian</title>
+<link href="css/mystyle.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript" src="js/date.format.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.each($('.menuButton'), function(mbIndex, mbValue) {
+			$(mbValue).click(function(event) {
+				if ($(this).find('a').attr('href') != 'home') {
+					event.preventDefault();
+					$('#content').load($(this).find('a').attr('href'));
+				}
+			})
+
+		});
+	});
+</script>
+</head>
 <body>
-<h2>Hello World!</h2>
+	<div id="header">
+		<div id="banner">
+			<h1></h1>
+		</div>
+		<div id="menubar">
+			<span class="menubutton"><a href="home">Home</a></span> <span
+				class="menubutton"><a href="author">Authors</a></span> <span
+				class="menubutton"><a href="book">Books</a></span> <span
+				class="menubutton"><a href="contact">Contact</a></span>
+		</div>
+	</div>
+	<div id="pageBody">
+		<div id="content">
+			<p>Wright bergkamp platt wilson campbell limpar. Emirates
+				highbury manor wenger graham rioch gooner onenil. Monreal sands gray
+				neave satterthwaite cazorla flamini diaby. Jenkinson frimpong kelly
+				gibbs. Sagna kennedy mertesacker vermaelen kosielny rosicky arteta
+				podolski. Wilshere ozil price giroud walcott ball theox ramsey
+				szczesny. Liambrady rocastle dixon davidoleary talbot adams
+				winterburn keown bould kroenke. Usmanov gazidis crawford davis
+				anderson dick. McNichol hollins jackson cross ashcroft briercliffe
+				gooing coleman. McEachrane ducat pauldavis sharp. McDonald lewis
+				fabianski sanogo bendtner shaw greenaway mckinnon flanagan graham
+				rutherford blyth. Bradshaw butler hutchins white toner williamson
+				baker mackie.</p>
+			<p>Milne robson john herd strong whyte henderson. Ure brown neill
+				magill eastham sammels barnwell. Mccullough skirton macleod
+				armstrong baker court furnell mclintock storey. Charliegeorge
+				stapleton rimmer nelson rice sunderland young jennings macdonald.
+				Rix sansom allinson champagnecharlie sansom woodcock robson. Lukic
+				perry groves merson Williams hayes. Alansmith richardson thomas
+				campbell hillier morrowbrokenarm jensen parlour. Platt vieira
+				grimandi overmars petit ljundberg kanu. Almunia rvp edu lauren reyes
+				hleb. Nasri adebayor arteta chapman denilson diaby.</p>
+			<ul>
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+				<li>Proin eget sem et ante convallis egestas a eget diam.</li>
+				<li>Aliquam fermentum velit vel nisi pulvinar, ac interdum
+					sapien rhoncus.</li>
+				<li>In facilisis lacus id sapien pharetra, nec commodo lectus
+					sodales.</li>
+			</ul>
+			
+			<p>Wright bergkamp platt wilson campbell limpar. Emirates
+				highbury manor wenger graham rioch gooner onenil. Monreal sands gray
+				neave satterthwaite cazorla flamini diaby. Jenkinson frimpong kelly
+				gibbs. Sagna kennedy mertesacker vermaelen kosielny rosicky arteta
+				podolski. Wilshere ozil price giroud walcott ball theox ramsey
+				szczesny. Liambrady rocastle dixon davidoleary talbot adams
+				winterburn keown bould kroenke. Usmanov gazidis crawford davis
+				anderson dick. McNichol hollins jackson cross ashcroft briercliffe
+				gooing coleman. McEachrane ducat pauldavis sharp. McDonald lewis
+				fabianski sanogo bendtner shaw greenaway mckinnon flanagan graham
+				rutherford blyth. Bradshaw butler hutchins white toner williamson
+				baker mackie.</p>
+			 <p>Milne robson john herd strong whyte henderson. Ure brown neill
+				magill eastham sammels barnwell. Mccullough skirton macleod
+				armstrong baker court furnell mclintock storey. Charliegeorge
+				stapleton rimmer nelson rice sunderland young jennings macdonald.
+				Rix sansom allinson champagnecharlie sansom woodcock robson. Lukic
+				perry groves merson Williams hayes. Alansmith richardson thomas
+				campbell hillier morrowbrokenarm jensen parlour. Platt vieira
+				grimandi overmars petit ljundberg kanu. Almunia rvp edu lauren reyes
+				hleb. Nasri adebayor arteta chapman denilson diaby.</p>
+			 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Mauris vehicula at tellus in porta. Donec pretium nec mauris nec
+				finibus. Integer nibh arcu, consectetur et elit eget, malesuada
+				dignissim risus. Sed ac efficitur nulla. Quisque eget sollicitudin
+				ante. Duis rutrum mauris eu mauris condimentum lobortis. Aliquam non
+				molestie dolor.</p>
+		</div>
+		<div id="newsPanel">
+			<div class="newsBubble">
+				<h1>Praesent facilisis purus non tellus pharetra</h1>
+				<p>Praesent facilisis purus non tellus pharetra, eu accumsan
+					eros interdum. Vivamus aliquam, nunc vel pretium ultricies, nunc
+					urna elementum orci, sed vulputate tortor risus in neque.</p>
+			</div>
+			<div class="newsBubble">
+				<h1>In tincidunt quis quam sed ultrices</h1>
+				<p>Nulla facilisi. Proin iaculis elit nec bibendum mattis.</p>
+			</div>
+			<div class="newsBubble">
+				<h1>Suspendisse vehicula dictum augue</h1>
+				<p>Ut consequat egestas lorem eget euismod. Quisque sem risus,
+					dictum eget eros auctor, consectetur rhoncus diam.</p>
+			</div>
+		</div>
+	</div>
+	<div id="footer">Created by Peter Gabori</div>
 </body>
 </html>

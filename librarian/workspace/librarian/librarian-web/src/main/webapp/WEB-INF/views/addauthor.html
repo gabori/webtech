@@ -1,0 +1,79 @@
+<html>
+<head>
+</head>
+<br />
+<h2>Add a new author</h2>
+<form action="" method="post" class="form">
+	<table class="tabla">
+		<tr>
+			<td>Name:</td>
+			<td><input type="text" name="name" autofocus /></td>
+		</tr>
+		<tr>
+			<td>Nationality:</td>
+			<td><select name="nationality" required="required"><option
+						value="Hungarian">Hungarian</option>
+					<option value="British">British</option>
+					<option value="Russian">Russian</option>
+					<option value="Spanish">Spanish</option>
+					<option value="American">American</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td>Birthdate:</td>
+			<td><input type="date" name="birthDate" /></td>
+		</tr>
+		<tr>
+			<td><input type="submit" name="insert" value="Save" /></td>
+		</tr>
+	</table>
+</form>
+<script type="text/javascript">
+	$.fn.serializeObject = function() {
+		var o = {};
+		var a = this.serializeArray();
+		$.each(a, function() {
+			if (o[this.name] !== undefined) {
+				if (!o[this.name].push) {
+					o[this.name] = [ o[this.name] ];
+				}
+				o[this.name].push(this.value || '');
+			} else {
+				o[this.name] = this.value || '';
+			}
+		});
+		return o;
+	};
+	$(document).ready(
+			function() {
+				$("form").submit(function() {
+					var val = $("input[type=submit][clicked=true]").val();
+
+						$.ajax({
+							contentType : 'application/json',
+							data : JSON.stringify($('form').serializeObject()),
+							dataType : 'json',
+							success : function(data) {
+								app.log("device control succeeded");
+								alert('Author successfully inserted');
+							},
+							error : function() {
+								app.log("Device control failed");
+								alert('Author failed to be inserted');
+							},
+							processData : false,
+							type : 'POST',
+							url : 'author/insert'
+						});
+				
+					
+				});
+				/*$("form input[type=submit]").click(
+						function() {
+							$("input[type=submit]", $(this).parents("form"))
+									.removeAttr("clicked");
+							$(this).attr("clicked", "true");
+						});*/
+			});
+</script>
+</html>

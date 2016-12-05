@@ -1,0 +1,35 @@
+ <script>
+	$.getJSON('books', function(data) {
+		$('#content').append('<h2>Books</h2>');
+		var table = $('<table class="tabla"></table>');
+		$(table).append('<tr><th>ID</th><th>Title</th><th>Genre</th><th>Author</th></tr>')
+		$.each(data, function(key, value) {
+			var row = $('<tr></tr>');
+			var id = $('<td>' + value['bookId'] + '</td>');
+			var titl = $('<td>' + value['title'] + '</td>');	
+			var genre = $('<td></td>');
+			var genpre = $('<pre></pre>');
+			$.each(value['genres'], function (gindex, gvalue) {
+		        $(genpre).append(gvalue + '\n');
+		    });
+			$(genre).append(genpre);
+			var author= $('<td></td>');
+			var authpre = $('<pre></pre>');
+			$.each(value['authors'], function (aindex, avalue) {
+					$(authpre).append('('+avalue['authorID'] + '): ');
+					$(authpre).append(avalue['name'] + ', ');
+					$(authpre).append(avalue['nationality'] + ', ');
+					var date = new Date(avalue['birthDate']);
+					$(authpre).append(date.format("yyyy. mm. dd.")+'\n');
+		    });
+			$(author).append(authpre);
+			$(row).append(id);
+			$(row).append(titl);
+			$(row).append(genre);
+			$(row).append(author);
+			$(table).append(row);
+		});
+		$('#content').append(table);
+		
+	});
+</script> 

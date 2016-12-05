@@ -1,0 +1,157 @@
+#header {
+	width: 1000px;
+	background: #CB8C1D;
+}
+
+#banner {
+	width: 950px;
+	height: 150px;
+	border: 1px solid black;
+	background: #F2EFE4;
+	margin: 10px 25px 0px 25px;
+}
+
+#banner p {
+	width: 100%;
+	text-align: justify;
+	/*margin: 5px 5px 5px 5px;*/
+}
+/* body */
+#content {
+	min-height: 500px;
+	width: 1000px;
+	background: #BD3632;
+}
+
+#content .tabla {
+	border-collapse: collapse;
+}
+
+#content .tabla th, td {
+	color: white;
+	text-shadow: white;
+	border: 2px solid blue;
+	background: #4C3327;
+	padding: 3px;
+	text-align: left;
+}
+
+#content p {
+	width: 100%;
+	text-align: justify;
+}
+
+#content .formButton {
+	display: inline-block;
+	width: 100px;
+	background: #80ffff;
+	border: 5px solid #ff0080;
+	border-radius: 10px;
+	margin: 9px;
+	text-align: center;
+	color: #ffff80;
+	text-decoration: none;
+}
+
+#content .formButton a {
+	color: solid black;
+	text-decoration: none;
+}
+
+#content .help {
+	background: aqua;
+}
+
+#newsP {
+	width: 100px;
+	background: grey;
+	float: right;
+}
+
+#pBody {
+	width: 1000px;
+}
+/* news */
+.newsB {
+	border: white dashed 3px;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.newsB h1 {
+	background: #ffff80;
+	font-size: 12px;
+	font-weight: normal;
+	width: 100%;
+	text-align: justify;
+}
+
+.newsB p {
+	font-style: italic;
+	font-size: 6px;
+	color: #80ff80;
+	padding: 5px;
+	width: 85%;
+	text-align: justify;
+}
+/* footer */
+#footer {
+	width: 1000px;
+	background: blue;
+	color: yellow;
+}
+
+#footer p {
+	width: 100%;
+	text-align: center;
+}
+
+}
+/* menu */
+#menuBar {
+	height: 50px;
+	background: aqua;
+	margin: auto;
+}
+
+#menuBar ul li {
+	display: inline-block;
+}
+
+#menuBar .menuButton {
+	display: inline-block;
+	width: 100px;
+	background: #80ff00;
+	border: 5px solid yellow;
+	border-radius: 20px;
+	margin: 10px;
+	text-align: center;
+	color: yellow;
+}
+
+#menuBar .menuButton a {
+	text-decoration: none;
+}
+
+#menuBar .menuButton:HOVER {
+	background: yellow;
+	border: 5px solid green;
+	border-radius: 20px;
+	color: green;
+	text-decoration: none;
+}
+
+/* forms */
+#content .form input {
+	width: 98%;
+}
+
+#content .form input[type=submit] {
+	width: 100%;
+	float: left;
+}
+
+#content .form input[type=checkbox] {
+	width: 5%;
+	float: left;
+}
